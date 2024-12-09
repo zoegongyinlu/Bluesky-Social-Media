@@ -5,7 +5,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "build": "cd frontend && cd twitter && npm install",
+    "build": "cd frontend && npm install",
     "prod": "cd backend && PORT=3001 node server.js"
   },
   "keywords": [],
