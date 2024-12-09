@@ -96,6 +96,9 @@ const MainPage = ({ user = {}, onLogout, setUser, onUsernameClick }) => {
     }
 
     try{
+      console.log('Current JWT cookie:', document.cookie); // adding for debugging
+
+
         const response = await fetch(`${API_URL}api/v1/posts/like/${postId}`,{
             method: 'PUT',
             headers: {
@@ -103,6 +106,14 @@ const MainPage = ({ user = {}, onLogout, setUser, onUsernameClick }) => {
             },
             credentials: 'include'
         });
+
+        console.log('Response status:', response.status);
+        if (!response.ok) {
+            const errorText = await response.text();
+            console.log('Error response:', errorText);
+            throw new Error(`Failed to like/unlike post: ${errorText}`);
+        }
+
         if (!response.ok) throw new Error('Failed to like/unlike post');
         const updatedLikes = await response.json();
 
