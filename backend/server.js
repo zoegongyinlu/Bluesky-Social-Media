@@ -18,7 +18,7 @@ dotenv.config();
 
 // Initialize Express app
 const app = express();
-
+app.set('trust proxy', 1);
 // Middlewares
 app.use(express.json());
 app.use(cookieParser()); // Parse cookies for JWT
@@ -38,8 +38,8 @@ app.use(cors({
   origin: ['https://twitter-vi2l.onrender.com', 'http://localhost:3000', 'https://twitter-vi2l.onrender.com'],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  exposedHeaders: ['Content-Type']
+  allowedHeaders: ['Content-Type', 'Authorization', 'Cookie'],
+  exposedHeaders: ['Content-Type', 'Set-Cookie']
 }));
 app.use(helmet()); // Secure HTTP headers
 
