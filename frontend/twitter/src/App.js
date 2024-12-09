@@ -9,7 +9,7 @@ import CreatePostForm from './CreatePost';
 
 import UserProfilePage from './UserProfile';
 
-
+const API_URL = process.env.REACT_APP_API_URL || 'https://yinlugongyifeichenlingxiaoguoproject3.onrender.com';
 const App = () => {
   const [currentPage, setCurrentPage] = useState('main'); // 
   const [user, setUser] = useState(null);
@@ -50,7 +50,7 @@ const App = () => {
   const handleLogout = async () => {
     console.log('Logging out - Current user before logout:', user);
     try {
-      const response = await fetch('http://localhost:3001/api/v1/auth/logout', {
+      const response = await fetch(`${API_URL}/api/v1/auth/logout`, {
           method: 'POST',
           credentials: 'include',
           headers: {

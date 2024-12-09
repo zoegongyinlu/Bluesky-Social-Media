@@ -9,7 +9,7 @@ import {
 
 } from '@fortawesome/free-solid-svg-icons'
 
-const API_URL = process.env.REACT_APP_API_URL || 'https://yifeichenyinlugonglingxiaoguoproject3.onrender.com';
+const API_URL = process.env.REACT_APP_API_URL || 'https://yinlugongyifeichenlingxiaoguoproject3.onrender.com';
 
 const CreatePostForm =({userId, onPostCreated}) =>{
     const [text, setText] = useState('');

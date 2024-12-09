@@ -24,7 +24,7 @@ const UserProfilePage = ({ username, currentUser }) => {
 const [postsLoading, setPostsLoading] = useState(true);
 const [postsError, setPostsError] = useState(null);
   
-
+const API_URL = process.env.REACT_APP_API_URL || 'https://yinlugongyifeichenlingxiaoguoproject3.onrender.com';
   useEffect(() => {
     fetchUserProfile();
   }, [username]);
@@ -43,7 +43,7 @@ const [postsError, setPostsError] = useState(null);
 
   const fetchUserProfile = async () => {
     try {
-      const response = await fetch(`http://localhost:3001/api/v1/users/profile/${username}`, {
+      const response = await fetch(`${API_URL}/api/v1/users/profile/${username}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
@@ -66,7 +66,7 @@ const [postsError, setPostsError] = useState(null);
   };
   const fetchUserPosts = async () => {
     try {
-      const response = await fetch(`http://localhost:3001/api/v1/posts/all`, {
+      const response = await fetch(`${API_URL}/api/v1/posts/all`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
@@ -97,7 +97,7 @@ const [postsError, setPostsError] = useState(null);
 
     setFollowLoading(true);
     try {
-      const response = await fetch(`http://localhost:3001/api/v1/users/follow/${profile._id}`, {
+      const response = await fetch(`${API_URL}/api/v1/users/follow/${profile._id}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
