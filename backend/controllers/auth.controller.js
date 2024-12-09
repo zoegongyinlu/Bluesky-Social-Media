@@ -45,7 +45,9 @@ export const login = async (req, res, next) => {
     // Send token in a cookie
     res.cookie("jwt", token, {
       httpOnly: true,
+      sameSite: 'none',
       maxAge: 15 * 24 * 60 * 60 * 1000, // 15 days
+      domain: '.render.com'
     });
 
     res.status(200).json({ user });
