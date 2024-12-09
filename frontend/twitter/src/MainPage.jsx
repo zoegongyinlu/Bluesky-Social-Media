@@ -15,7 +15,7 @@ import {
 import { faTwitter} from '@fortawesome/free-brands-svg-icons';
 import {faGrinHearts, faComment } from '@fortawesome/free-regular-svg-icons';
 
-const API_URL = 'https://yinlugongyifeichenlingxiaoguoproject3.onrender.com/';
+const API_URL = 'https://project3-44gu.onrender.com/';
 
 const MainPage = ({ user = {}, onLogout, setUser, onUsernameClick }) => { 
   const [posts, setPosts] = useState([]);
