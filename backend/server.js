@@ -35,7 +35,7 @@ app.use((req, res, next) => {
   next();
 });
 app.use(cors({ 
-  origin: process.env.CLIENT_URL || "http://localhost:3001",  // Fallback included
+  origin: process.env.CLIENT_URL || 'https://yifeichenyinlugonglingxiaoguoproject3.onrender.com', // Fallback included
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
   allowedHeaders: ["Content-Type", "Authorization"],

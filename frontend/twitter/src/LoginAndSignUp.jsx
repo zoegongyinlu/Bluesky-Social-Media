@@ -11,6 +11,7 @@ import {
 import { faTwitter} from '@fortawesome/free-brands-svg-icons';
 
 
+const API_URL = process.env.REACT_APP_API_URL || 'https://yifeichenyinlugonglingxiaoguoproject3.onrender.com';
 
 const DisplayError = ({ error, details }) => (
     <div className="bg-red-50 border-l-4 border-red-500 p-4 text-red-700">
@@ -39,7 +40,7 @@ const SignupPage = ({onLoginClick, onSignupSuccess})=>{
         setError(null);
 
         try{
-            const response = await fetch('http://localhost:3001/api/v1/auth/signup', {
+            const response = await fetch(`${API_URL}/api/v1/auth/signup`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formInfo),
@@ -198,7 +199,7 @@ const LoginPage = ({onSignupClick, onLoginSuccess}) =>{
         setError(null);
 
         try{
-            const response = await fetch('http://localhost:3001/api/v1/auth/login',{
+            const response = await fetch('${API_URL}/api/v1/auth/login',{
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),
@@ -333,7 +334,7 @@ const LoginPage = ({onSignupClick, onLoginSuccess}) =>{
         const [error, setError] = useState([]);
         const handleLogout = async () => {
             try {
-              const response = await fetch('http://localhost:3001/api/v1/auth/logout', {
+              const response = await fetch('${API_URL}/api/v1/auth/logout', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
