@@ -4,7 +4,7 @@ import { createPost, deletePost, commentOnPost, likeUnlikePost, getAllPosts, get
 
 const router = express.Router();
 
-router.get("/all", authMiddleware, getAllPosts);
+router.get("/all", getAllPosts); // to add this for public too
 router.get("/likes/:id", authMiddleware, getLikedPosts);
 router.get("/following", authMiddleware, getFollowingPosts);
 router.get("/user/:username", authMiddleware, getUserPosts);
