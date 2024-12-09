@@ -34,12 +34,12 @@ app.use((req, res, next) => {
   });
   next();
 });
-app.use(cors({ 
-  origin: process.env.CLIENT_URL || 'https://yifeichenyinlugonglingxiaoguoproject3.onrender.com', // Fallback included
+app.use(cors({
+  origin: ['https://twitter-vi2l.onrender.com', 'http://localhost:3000'],
   credentials: true,
-  methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-  exposedHeaders: ["Content-Type"]
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  exposedHeaders: ['Content-Type']
 }));
 app.use(helmet()); // Secure HTTP headers
 
