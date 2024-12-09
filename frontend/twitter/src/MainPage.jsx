@@ -40,7 +40,7 @@ const MainPage = ({ user = {}, onLogout, setUser, onUsernameClick }) => {
 
   const fetchPosts = async () => {
     try {
-      const response = await fetch(`${API_URL}/api/v1/posts/all`, {
+      const response = await fetch(`${API_URL}api/v1/posts/all`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
@@ -96,7 +96,7 @@ const MainPage = ({ user = {}, onLogout, setUser, onUsernameClick }) => {
     }
 
     try{
-        const response = await fetch(`${API_URL}/api/v1/posts/like/${postId}`,{
+        const response = await fetch(`${API_URL}api/v1/posts/like/${postId}`,{
             method: 'PUT',
             headers: {
                  'Content-Type': 'application/json'
@@ -140,7 +140,7 @@ const MainPage = ({ user = {}, onLogout, setUser, onUsernameClick }) => {
         return;
       }
       try{
-        const response = await fetch(`${API_URL}/api/v1/posts/comment/${postId}`, {
+        const response = await fetch(`${API_URL}api/v1/posts/comment/${postId}`, {
             method: 'PATCH',
             headers:{
                 'Content-Type': 'application/json'
@@ -172,7 +172,7 @@ const MainPage = ({ user = {}, onLogout, setUser, onUsernameClick }) => {
     }
 
     try{
-        const response = await fetch(`${API_URL}/api/v1/posts/comment/${postId}`,{
+        const response = await fetch(`${API_URL}api/v1/posts/comment/${postId}`,{
             method: 'PATCH',
             headers:{
                 'Content-Type': 'application/json'  
@@ -197,7 +197,7 @@ const handleFollow = async (userId) => {
   }
 
   try {
-    const response = await fetch(`${API_URL}/api/v1/users/follow/${userId}`, {
+    const response = await fetch(`${API_URL}api/v1/users/follow/${userId}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -235,7 +235,7 @@ const handleFollow = async (userId) => {
     }
   
     try {
-      const response = await fetch(`${API_URL}/api/v1/posts/${postId}`, {
+      const response = await fetch(`${API_URL}api/v1/posts/${postId}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json'
@@ -290,7 +290,7 @@ const handleFollow = async (userId) => {
 
       console.log('Sending request with:', postData);
 
-      const response = await fetch(`${API_URL}/api/v1/posts/create`, {
+      const response = await fetch(`${API_URL}api/v1/posts/create`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

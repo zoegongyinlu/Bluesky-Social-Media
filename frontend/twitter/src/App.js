@@ -50,7 +50,7 @@ const App = () => {
   const handleLogout = async () => {
     console.log('Logging out - Current user before logout:', user);
     try {
-      const response = await fetch(`${API_URL}/api/v1/auth/logout`, {
+      const response = await fetch(`${API_URL}api/v1/auth/logout`, {
           method: 'POST',
           credentials: 'include',
           headers: {

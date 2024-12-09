@@ -9,7 +9,7 @@ import {
 
 } from '@fortawesome/free-solid-svg-icons'
 
-const API_URL = process.env.REACT_APP_API_URL || 'https://yinlugongyifeichenlingxiaoguoproject3.onrender.com';
+const API_URL = process.env.REACT_APP_API_URL || 'https://yinlugongyifeichenlingxiaoguoproject3.onrender.com/';
 
 const CreatePostForm =({userId, onPostCreated}) =>{
     const [text, setText] = useState('');
@@ -64,7 +64,7 @@ const CreatePostForm =({userId, onPostCreated}) =>{
             console.log('Sending request with:', postData);
 
 
-            const response = await fetch(`${API_URL}/api/v1/posts/create`,{
+            const response = await fetch(`${API_URL}api/v1/posts/create`,{
                 method: 'POST',
                 headers:{
                     'Content-Type':'application/json'
