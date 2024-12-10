@@ -15,7 +15,7 @@ export const generateTokenAndSetCookie = (userId, res, additionalPayload = {}) =
     res.cookie("jwt", token, {
       maxAge: 15 * 24 * 60 * 60 * 1000, // 15 days in milliseconds
       httpOnly: true, // Prevent XSS attacks
-      sameSite: "strict", // Prevent CSRF attacks
+      sameSite: process.env.NODE_ENV === "production"? "none":"strict", // Prevent CSRF attacks
       secure: process.env.NODE_ENV === "production", // HTTPS only in production
       domain: process.env.COOKIE_DOMAIN || undefined, // Optional domain
     });

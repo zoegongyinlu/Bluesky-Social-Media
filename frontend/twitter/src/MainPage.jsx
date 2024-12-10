@@ -43,9 +43,12 @@ const MainPage = ({ user = {}, onLogout, setUser, onUsernameClick }) => {
       const response = await fetch(`${API_URL}api/v1/posts/all`, {
         method: 'GET',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          'X-Requested-With': 'XMLHttpRequest'
         },
-        credentials: 'include'
+        credentials: 'include',
+        mode: 'cors'
       });
 
       if (!response.ok) {
