@@ -34,6 +34,7 @@ app.use((req, res, next) => {
   });
   next();
 });
+
 app.use(cors({
   origin: ['https://twitter-vi2l.onrender.com', 'http://localhost:3000'],
   credentials: true,

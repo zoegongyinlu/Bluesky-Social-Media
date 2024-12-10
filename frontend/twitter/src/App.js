@@ -10,6 +10,7 @@ import CreatePostForm from './CreatePost';
 import UserProfilePage from './UserProfile';
 
 const API_URL = process.env.REACT_APP_API_URL || 'https://project3-44gu.onrender.com/';
+
 const App = () => {
   const [currentPage, setCurrentPage] = useState('main'); // 
   const [user, setUser] = useState(null);
