@@ -44,8 +44,8 @@ const MainPage = ({ user = {}, onLogout, setUser, onUsernameClick }) => {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
-          'Accept': 'application/json',
-          'X-Requested-With': 'XMLHttpRequest'
+       
+    
         },
         credentials: 'include',
         mode: 'cors'
