@@ -47,7 +47,7 @@ export const login = async (req, res, next) => {
       httpOnly: true,
       sameSite: 'none',
       maxAge: 15 * 24 * 60 * 60 * 1000, // 15 days
-      domain: '.render.com'
+      path : '/'
     });
 
     res.status(200).json({ user });
