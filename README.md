@@ -1,6 +1,8 @@
-# Bluesky Social Media Platform
+# Bluesky Social Media Platform 
+https://twitter-vi2l.onrender.com/
 
 A full-stack social media application built with React and Node.js, inspired by Twitter/X and Bluesky. This project provides a modern social networking experience with real-time features, user authentication, and a clean, responsive interface.
+The project is deployed on render. (link above)
 
 ## Features
 
