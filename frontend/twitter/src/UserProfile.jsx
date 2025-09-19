@@ -24,7 +24,7 @@ const UserProfilePage = ({ username, currentUser }) => {
 const [postsLoading, setPostsLoading] = useState(true);
 const [postsError, setPostsError] = useState(null);
   
-const API_URL = process.env.REACT_APP_API_URL || 'https://project3-44gu.onrender.com/';
+const API_URL = process.env.REACT_APP_API_URL || 'https://yinlugongyifeichenlingxiaoguoproject3.onrender.com/';
   useEffect(() => {
     fetchUserProfile();
   }, [username]);

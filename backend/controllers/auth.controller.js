@@ -19,7 +19,10 @@ export const signup = async (req, res, next) => {
     // Send token in a cookie
     res.cookie("jwt", token, {
       httpOnly: true,
+      sameSite: 'none',
+      secure: true,
       maxAge: 15 * 24 * 60 * 60 * 1000, // 15 days
+      path: '/'
     });
     
     res.setHeader('Content-Type', 'application/json');//adding this for debugging
@@ -46,8 +49,9 @@ export const login = async (req, res, next) => {
     res.cookie("jwt", token, {
       httpOnly: true,
       sameSite: 'none',
+      secure: true,
       maxAge: 15 * 24 * 60 * 60 * 1000, // 15 days
-      path : '/'
+      path: '/'
     });
 
     res.status(200).json({ user });
