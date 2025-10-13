@@ -39,17 +39,8 @@ import mongoose from "mongoose";
  */
 const connectMongoDB = async () => {
   try {
-    /**
-     * Establish MongoDB connection with optimized options
-     * @param {String} process.env.MONGO_URI - Connection string from environment
-     * @param {Object} options - Connection options for optimal performance
-     * @param {Boolean} options.useNewUrlParser - Use new URL parser (deprecated but kept for compatibility)
-     * @param {Boolean} options.useUnifiedTopology - Use new server discovery and monitoring engine
-     */
-    await mongoose.connect(process.env.MONGO_URI, {
-      useNewUrlParser: true,        // Use new URL parser (legacy option)
-      useUnifiedTopology: true,     // Use new server discovery and monitoring engine
-    });
+
+    await mongoose.connect(process.env.MONGO_URI);
     
     console.log("MongoDB connected successfully");
     
