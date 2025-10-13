@@ -31,7 +31,7 @@ import notificationRoutes from "./routes/notificationRoutes.js";
  * Load environment variables from .env file
  * This must be called before accessing process.env variables
  */
-dotenv.config();
+dotenv.config({ path: './.env' });
 
 /**
  * Initialize Express application
