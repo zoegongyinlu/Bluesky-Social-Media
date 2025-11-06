@@ -1,9 +1,20 @@
-# Bluesky Social Media Platform  
+#  Bluesky Social Media Platform (Twitter Clone) 
 [Live Demo on Render](https://twitter-vi2l.onrender.com)
+
+![React](https://img.shields.io/badge/React_18-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express.js-404D59?style=flat-square)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=flat-square&logo=mongodb&logoColor=white)
+![Mongoose](https://img.shields.io/badge/Mongoose-880000?style=flat-square)
+![JWT](https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white)
+![Cloudinary](https://img.shields.io/badge/Cloudinary-4285F4?style=flat-square&logo=cloudinary&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
+![Render](https://img.shields.io/badge/Deployed_on_Render-46E3B7?style=flat-square&logo=render&logoColor=white)
 
 A full-stack social media application built with React and Node.js, inspired by Twitter/X and Bluesky.  
 The application is **fully deployed on Render**, providing a live, production-ready experience accessible at the link above.  
 It offers real-time interactions, secure user authentication, and a clean, responsive UI.
+
 
 ## Features
 
